@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    font-size: 1rem;
 }
 
 header {
@@ -15,48 +16,66 @@ header {
 
 .logo h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 2rem;
 }
 
 .logo p {
     margin-top: 0.5em;
-    font-size: 0.9em;
+    font-size: 0.9rem;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     margin: 1em 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 1em;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1rem;
 }
 
 main {
-    padding: 1.25rem; /* 20px */
+    padding: 1.25rem;
 }
 
 .content-section {
     background-color: white;
-    padding: 1.25rem; /* 20px */
-    margin-bottom: 1.25rem; /* 20px */
-    border-radius: 0.5rem; /* 8px */
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); /* 2px 4px */
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 
 .content-section h2 {
     color: #007bff;
-    border-bottom: 0.125rem solid #007bff; /* 2px */
+    border-bottom: 0.125rem solid #007bff;
     padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    font-size: 1.5rem;
+}
 
+.noticia-item {
+    border-bottom: 0.0625rem solid #eee;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+.noticia-item h3 {
+    color: #333;
+    margin-top: 0;
+    font-size: 1.25rem;
+}
 
 .noticia-item a {
     color: #007bff;
@@ -80,8 +99,8 @@ main {
 .form-group textarea {
     width: 100%;
     padding: 0.7em;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border: 0.0625rem solid #ddd;
+    border-radius: 0.25rem;
     box-sizing: border-box;
 }
 
@@ -90,13 +109,14 @@ main {
 }
 
 button[type="submit"] {
-    background-color: #28a745; /* Cor de destaque para botões */
+    background-color: #28a745;
     color: white;
     padding: 0.8em 1.5em;
     border: none;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     cursor: pointer;
     font-weight: bold;
+    font-size: 1rem;
 }
 
 button[type="submit"]:hover {
@@ -108,16 +128,70 @@ footer {
     color: white;
     text-align: center;
     padding: 1em 0;
-    font-size: 0.8em;
+    font-size: 0.8rem;
 }
 
-/* Estilos para tornar o layout responsivo (adaptação a diferentes telas) */
-@media (max-width: 768px) {
-    nav ul {
-        text-align: center;
+/* === Media Queries para Responsividade === */
+
+/* Smartphones (até 480px) */
+@media (max-width: 30rem) {
+    .logo h1 {
+        font-size: 1.5rem;
     }
-    nav ul li {
-        display: block;
-        margin: 0.5em 0;
+
+    .logo p {
+        font-size: 0.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .content-section h2 {
+        font-size: 1.2rem;
+    }
+
+    .noticia-item h3 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Tablets (481px a 768px) */
+@media (min-width: 30.063rem) and (max-width: 48rem) {
+    main {
+        padding: 1rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+}
+
+/* PCs (769px a 1200px) */
+@media (min-width: 48.063rem) and (max-width: 75rem) {
+    .content-section {
+        max-width: 800px;
+        margin: 1.25rem auto;
+    }
+}
+
+/* Telas grandes / TVs (acima de 1200px) */
+@media (min-width: 75.063rem) {
+    body {
+        font-size: 1.125rem;
+    }
+
+    .content-section {
+        max-width: 1000px;
+        margin: 2rem auto;
+    }
+
+    nav a {
+        font-size: 1.125rem;
+    }
+
+    button[type="submit"] {
+        font-size: 1.125rem;
     }
 }
