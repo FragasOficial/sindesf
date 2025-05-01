@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #007bff; /* Cor primária do sindicato */
+    background-color: #007bff;
     color: white;
     padding: 1em 0;
     text-align: center;
@@ -41,34 +41,22 @@ nav a {
 }
 
 main {
-    padding: 20px;
+    padding: 1.25rem; /* 20px */
 }
 
 .content-section {
     background-color: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1.25rem; /* 20px */
+    margin-bottom: 1.25rem; /* 20px */
+    border-radius: 0.5rem; /* 8px */
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); /* 2px 4px */
 }
 
 .content-section h2 {
     color: #007bff;
-    border-bottom: 2px solid #007bff;
+    border-bottom: 0.125rem solid #007bff; /* 2px */
     padding-bottom: 0.5em;
-    margin-bottom: 1em;
-}
 
-.noticia-item {
-    border-bottom: 1px solid #eee;
-    padding-bottom: 1em;
-    margin-bottom: 1em;
-}
-
-.noticia-item h3 {
-    color: #333;
-    margin-top: 0;
-}
 
 .noticia-item a {
     color: #007bff;
